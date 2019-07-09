@@ -1,17 +1,16 @@
 package br.com.wobbu.score
 
+import br.com.wobbu.score.viewmodel.MainViewModel
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
-import org.junit.Assert.*
-
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 class ExampleUnitTest {
+
+    private val mainViewModel by lazy { MainViewModel() }
+
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun percent_calculation() {
+        val percent = mainViewModel.percentageCalculator(320, 500)
+        assertEquals(percent, "64")
     }
 }
