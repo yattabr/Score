@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         txt_score.text = scoreResponse.creditReportInfo.score.toString()
         val maxScoreFormatted = "out of ${scoreResponse.creditReportInfo.maxScoreValue}"
         txt_max_score.text = maxScoreFormatted
-        pb_loading.visibility = View.GONE
 
         val score = scoreResponse.creditReportInfo.score
         val maxScore = scoreResponse.creditReportInfo.maxScoreValue

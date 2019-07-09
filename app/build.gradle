@@ -25,6 +25,9 @@ android {
             buildConfigField "String", "SERVER_URL", '"https://5lfoiyb0b3.execute-api.us-west-2.amazonaws.com/prod/mockcredit/values"'
         }
     }
+    testOptions {
+        animationsDisabled = true
+    }
 }
 
 dependencies {
